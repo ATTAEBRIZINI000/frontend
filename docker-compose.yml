@@ -1,0 +1,11 @@
+
+
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react_app_prod
+    ports:
+      - "4000:4000"
+    restart: unless-stopped
