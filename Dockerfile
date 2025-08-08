@@ -23,4 +23,5 @@ COPY --from=builder /app/dist ./dist
 EXPOSE 4000
 
 # Serve the static files
-CMD ["serve", "-s", "dist", "-l", "4000"]
+CMD ["serve", "-s", "dist", "-l", "tcp://0.0.0.0:4000"]
+
